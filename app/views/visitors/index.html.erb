@@ -1,1 +1,27 @@
-<h3>Welcome</h3>
+<h3>Welcome to Michael MacNaughton's dev-app!</h3>
+<p>You have reached the "dev-app" requested and which may be found
+  on <a href="https://github.com/TexasWebDevelopers/macnaughtons_fizz_buzz" title="Dev-App" target=_blank">GitHub</a>.</p>
+<p>In addition, please find a link to my <a href="http://www.texaswebdevelopers.com/pdf/Michael_MacNaughton_resume_08-14-fr.pdf" title="View Resume as a PDF" target="_blank">resume</a>
+  and some interesting <%= link_to 'Project Euler', page_path('euler') %> (pronounced "Oiler") solutions I coded up in Ruby.</p>
+<blockquote>
+  Method:<br />
+    <code>
+  def fizzbuzz(x)<br />
+  case<br />
+  when x % 15 == 0 then "FizzBuzz"<br />
+  when x % 5 == 0 then "Buzz"<br />
+  when x % 3 == 0 then "Fizz"<br />
+  else x<br />
+  end<br />
+    </code>
+  Call in View:<br />
+    <code>
+  &lt;% 1.upto(100).each do |num| %&gt;<br />
+  &lt;= fizzbuzz(num) %&gt;<br />
+  &lt;% end %&gt;<br />
+    </code>
+</blockquote>
+<p>Results of the above method and call:<br />
+<% 1.upto(100).each do |num| %>
+ <%= fizzbuzz(num) %>,
+<% end %></p>
